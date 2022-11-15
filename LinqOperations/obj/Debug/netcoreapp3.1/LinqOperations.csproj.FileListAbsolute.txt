@@ -1,0 +1,14 @@
+E:\Users\dromanow\LinqOperations\LinqOperations\bin\Debug\netcoreapp3.1\LinqOperations.exe
+E:\Users\dromanow\LinqOperations\LinqOperations\bin\Debug\netcoreapp3.1\LinqOperations.deps.json
+E:\Users\dromanow\LinqOperations\LinqOperations\bin\Debug\netcoreapp3.1\LinqOperations.runtimeconfig.json
+E:\Users\dromanow\LinqOperations\LinqOperations\bin\Debug\netcoreapp3.1\LinqOperations.runtimeconfig.dev.json
+E:\Users\dromanow\LinqOperations\LinqOperations\bin\Debug\netcoreapp3.1\LinqOperations.dll
+E:\Users\dromanow\LinqOperations\LinqOperations\bin\Debug\netcoreapp3.1\LinqOperations.pdb
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.csproj.AssemblyReference.cache
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.AssemblyInfoInputs.cache
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.AssemblyInfo.cs
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.csproj.CoreCompileInputs.cache
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.dll
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.pdb
+E:\Users\dromanow\LinqOperations\LinqOperations\obj\Debug\netcoreapp3.1\LinqOperations.genruntimeconfig.cache
