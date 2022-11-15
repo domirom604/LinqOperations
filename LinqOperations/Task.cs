@@ -64,7 +64,12 @@ namespace LinqOperations
 
             return result;
         }
+        public string[] Task_8()
+        {
+            string[] cities ={ "ROME","LONDON","NAIROBI","CALIFORNIA","ZURICH","NEW DELHI","AMSTERDAM","ABU DHABI", "PARIS" };
 
+            return cities;
+        }
 
     }
 
