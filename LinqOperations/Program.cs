@@ -31,6 +31,15 @@ namespace LinqOperations
             Console.WriteLine("Keys: "+string.Join(",",a[1]));
             Console.WriteLine("Sum: "+string.Join(",", a[0]));
             Console.WriteLine("Count: "+string.Join(",", a[2]));
+
+            Console.WriteLine("[{0}]", string.Join(", ", task.Task_9('N','I')));
+            
+            task.Task_10(8);
+            task.Task_11(3);
+            task.Task_12(3);
+            task.Task_13_and_14();
+            Students student = new Students();
+            task.Task_15(student.GtStuRec(),3);
         }
     }
 }

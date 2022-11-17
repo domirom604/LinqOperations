@@ -7,9 +7,22 @@ namespace LinqOperations
 {
     class Task
     {
-        public int [] Task_1(int [] n1)
+        List<int> list = new List<int>();
+        public Task()
         {
-            IEnumerable<int> scoreQuery = from item in n1 where item%2==0 select item;
+            list.Add(14);
+            list.Add(4);
+            list.Add(8);
+            list.Add(2);
+            list.Add(9);
+            list.Add(17);
+            list.Add(12);
+            list.Add(7);
+        }
+       
+        public int[] Task_1(int[] n1)
+        {
+            IEnumerable<int> scoreQuery = from item in n1 where item % 2 == 0 select item;
             n1 = scoreQuery.ToArray();
             return n1;
         }
@@ -22,18 +35,18 @@ namespace LinqOperations
         public int[] Task_3()
         {
             var arr1 = new[] { 3, -1, -3, 6, 9, 2, -7, 0, 8, 14, 13, 24, 12, 6, 5 };
-            IEnumerable<int> scoreQuery = from item in arr1 where item > 0 && item<12 select item;
+            IEnumerable<int> scoreQuery = from item in arr1 where item > 0 && item < 12 select item;
             arr1 = scoreQuery.ToArray();
             return arr1;
         }
         public int[] Task_4()
         {
             var arr1 = new[] { 3, 9, 2, 8, 6, 5 };
-            IEnumerable<int> scoreQuery = from item in arr1 where item*item>20 select item;
+            IEnumerable<int> scoreQuery = from item in arr1 where item * item > 20 select item;
             arr1 = scoreQuery.ToArray();
             return arr1;
         }
-        public IDictionary<int,int> Task_5()
+        public IDictionary<int, int> Task_5()
         {
             int[] arr1 = new int[] { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
             var dictionary = arr1.GroupBy(item => item).ToDictionary(p => p.Key, q => q.Count());
@@ -47,7 +60,7 @@ namespace LinqOperations
         }
         public int[][] Task_8()
         {
-            int [][] result = new int[3][];
+            int[][] result = new int[3][];
             result[0] = new int[5];
             result[1] = new int[4];
             result[2] = new int[2];
@@ -64,11 +77,53 @@ namespace LinqOperations
 
             return result;
         }
-        public string[] Task_8()
+        public string[] Task_9(char start, char end)
         {
-            string[] cities ={ "ROME","LONDON","NAIROBI","CALIFORNIA","ZURICH","NEW DELHI","AMSTERDAM","ABU DHABI", "PARIS" };
-
+            IEnumerable<string> result;
+            string[] cities = { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
+            result = from city in cities where city.First() == start && city.Last() == end select city;
+            cities = result.ToArray();
             return cities;
+        }
+
+        public List<int> Task_10(int wartoscZKlawiatury)
+        {
+            list = list.FindAll(element => element > wartoscZKlawiatury);
+            return list;
+        }
+
+        public List<int> Task_11(int numberOfLastElement)
+        {
+            var lis = list.Take(numberOfLastElement);
+            return list;
+        }
+        public List<int> Task_12(int numberOfElement)
+        {
+            list.Sort();
+            list.Reverse();
+            var lis = list.Take(numberOfElement);
+            return list;
+        }
+
+        public void Task_13_and_14()
+        {
+            IEnumerable<char> result;
+            string str = "abZddwkKecjjeksoMZekcllkenKdkwel";
+            result = (from charakters in str where charakters.Equals(Char.ToUpper(charakters)) select charakters);
+            string upperCasOnly = "";
+            result = result.ToArray();
+            upperCasOnly = string.Join("",result);
+        }
+        public void Task_15(List<Students> students, int nValue)
+        {
+            students = students.OrderBy(o => o.GroupPoint).ToList();
+            students.Reverse();
+            var bestSTudents = students.Take(nValue);
+        }
+        public void Task_16()
+        {
+            string[] arr1 = { "a.erc", "b.txt","c.ldd","d.pdf", "e.PDF","a.pdf", "b.xml", "z.txt", "zzz.doc" };
+
         }
 
     }
