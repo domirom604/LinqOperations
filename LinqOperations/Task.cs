@@ -8,6 +8,8 @@ namespace LinqOperations
     class Task
     {
         List<int> list = new List<int>();
+        List<Purchase> purchlist = new List<Purchase>();
+        List<Item_mast> itemlist = new List<Item_mast>();
         public Task()
         {
             list.Add(14);
@@ -164,7 +166,10 @@ namespace LinqOperations
 
         public void Task_19()
         {
-
+            var query = from item in itemlist join purch in purchlist on item.Id equals purch.Id select new
+            {
+                purch.Id
+            };
         }
         public void Task_20()
         {

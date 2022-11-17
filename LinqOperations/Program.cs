@@ -44,6 +44,9 @@ namespace LinqOperations
             task.Task_16();
             task.Task_17(9);
             task.Task_18();
+            task.Task_19();
+            task.Task_20();
+            task.Task_21();
         }
     }
 }
