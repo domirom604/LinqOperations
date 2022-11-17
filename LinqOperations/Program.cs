@@ -40,6 +40,10 @@ namespace LinqOperations
             task.Task_13_and_14();
             Students student = new Students();
             task.Task_15(student.GtStuRec(),3);
+
+            task.Task_16();
+            task.Task_17(9);
+            task.Task_18();
         }
     }
 }

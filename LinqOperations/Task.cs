@@ -18,6 +18,26 @@ namespace LinqOperations
             list.Add(17);
             list.Add(12);
             list.Add(7);
+
+            List<Item_mast> itemlist = new List<Item_mast>
+             {
+             new Item_mast { Id = 1, Descr = "A" },
+             new Item_mast { Id = 2, Descr = "B" },
+             new Item_mast { Id = 3, Descr = "C" },
+             new Item_mast { Id = 4, Descr = "D" },
+             new Item_mast { Id = 5, Descr = "E" }
+             };
+
+            List<Purchase> purchlist = new List<Purchase>
+             {
+             new Purchase { No=100,  Id = 3, Qty = 55 },
+             new Purchase { No =101, Id = 2, Qty = 44 },
+             new Purchase { No =102, Id = 3, Qty = 555 },
+             new Purchase { No =103, Id = 4, Qty = 33 },
+             new Purchase { No =104, Id = 3, Qty = 33 },
+             new Purchase { No =105, Id = 4, Qty = 44 },
+             new Purchase { No =106, Id = 1, Qty = 343 }
+             };
         }
        
         public int[] Task_1(int[] n1)
@@ -123,8 +143,37 @@ namespace LinqOperations
         public void Task_16()
         {
             string[] arr1 = { "a.erc", "b.txt","c.ldd","d.pdf", "e.PDF","a.pdf", "b.xml", "z.txt", "zzz.doc" };
+            var dictionary = arr1.GroupBy(item => item.Substring(2).ToLower()).ToDictionary(p => p.Key, q => q.Count());
+        }
+
+        public void Task_17(int itemToDelate)
+        {
+            int[] arr1 = { 5, 1, 9, 2, 3, 7, 4, 5, 6, 8, 7, 6, 3, 4, 5, 2 };
+            List<int> numbers = arr1.ToList();
+            var itemToRemove =numbers.FirstOrDefault(en => en == itemToDelate);
+            numbers.Remove(itemToRemove);
 
         }
+
+        public void Task_18()
+        {
+            char[] charset1 = { 'A', 'B', 'C', 'D' };
+            int[] numset1 = { 1, 2, 3, 4 };
+            var query = from x in charset1 from y in numset1 select new { x, y };
+        }
+
+        public void Task_19()
+        {
+
+        }
+        public void Task_20()
+        {
+
+        }
+        public void Task_21()
+        {
+        }
+
 
     }
 
